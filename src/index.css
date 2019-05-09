@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.app {
+  margin: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.container > div {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.container > div h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.container > div label {
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.container > div button {
+  margin: 10px 6px 0;
+}
+
+.container > div button:first-of-type{
+  margin-left: 0;
+}
+
+.container > div button:last-of-type{
+  margin-left: 0;
+}
