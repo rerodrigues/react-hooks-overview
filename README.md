@@ -82,6 +82,16 @@ const App = () => {
 export default App;
 ```
 
+#### Only run when certain variables changes
+
+Will only run when the `value` variable is changed.
+
+```jsx
+useEffect(() => {
+  document.title = `${value} is the current value`;
+}, [value]
+```
+
 #### Only run on componentDidMount
 
 Passing an empty array will block the hook from running when component re-renders.
@@ -90,16 +100,6 @@ Passing an empty array will block the hook from running when component re-render
 useEffect(() => {
   document.title = `${value} is the current value=`;
 }, []
-```
-
-#### Only run when certain props changes
-
-Will only run when the `value` variable is changed.
-
-```jsx
-useEffect(() => {
-  document.title = `${value} is the current value`;
-}, [value]
 ```
 
 #### Running when component unmounts
@@ -196,7 +196,7 @@ export default App;
 
 ### Components with hooks
 
-For now, React hooks are not very well supported across all the React eco-system. Especialy Especially Enzyme does not fully support testing functional components with hooks yet.
+For now, React hooks are not very well supported across all the React eco-system. Especially Enzyme does not fully support testing functional components with hooks yet.
 For this you will need to use a library called [react-testing-library] like the example below:
 
 ```jsx
@@ -276,7 +276,7 @@ describe('Custom Hook', () => {
 
 ### useContext
 
-This hook lets you access a Context and return its default or provider value. Example:
+This hook lets you access a Context and return its default or Provider value. Example:
 
 #### Context
 
