@@ -2,8 +2,8 @@ import React from 'react';
 
 import UseState from './use-state';
 import UseEffect from './use-effect';
-import UseCounter from './use-counter';
-import UseCounter2 from './use-counter/component-2';
+import UseCounter from './custom-hook';
+import UseCounter2 from './custom-hook/component-2';
 import UseContext from './use-context';
 import UseReducer from './use-reducer';
 
