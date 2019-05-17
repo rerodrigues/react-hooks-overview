@@ -89,7 +89,7 @@ Al pasar un array vacío, el hook no se ejecuta cuando el componente se renderiz
 ```jsx
 useEffect(() => {
   document.title = `${value} is the current value=`;
-}, []
+}, []);
 ```
 
 #### Sólo ejecuta cuando variables específicas se cambian
@@ -99,7 +99,7 @@ Sólo va a ejecutar cuando la variable `value`se cambia.
 ```jsx
 useEffect(() => {
   document.title = `${value} is the current value`;
-}, [value]
+}, [value]);
 ```
 
 #### Ejecutando cuando el componente desmontase
@@ -113,7 +113,7 @@ useEffect(() => {
   return () => {
     console.log('Component unmounted')
   }
-}
+});
 ```
 
 ## Custom Hooks
@@ -244,7 +244,7 @@ define('useCounter tests', () => {
   it('should return the initial value', () => {
     expect(value).toEqual(initialValue);
   })
-})
+});
 ```
 
 #### Cómo probar un custom hook
@@ -404,7 +404,7 @@ componentDidMount() {
 
   const response = fakeService.getResponse(this.state.id); // concern 2
   this.state.response = response;
-}
+};
 ```
 
 Con lo uso de hooks, se puede separar cada responsabilidad en una llamada diferent al hook. Ejemplo:

@@ -89,7 +89,7 @@ Will only run when the `value` variable is changed.
 ```jsx
 useEffect(() => {
   document.title = `${value} is the current value`;
-}, [value]
+}, [value]);
 ```
 
 #### Only run on componentDidMount
@@ -99,7 +99,7 @@ Passing an empty array will block the hook from running when component re-render
 ```jsx
 useEffect(() => {
   document.title = `${value} is the current value=`;
-}, []
+}, []);
 ```
 
 #### Running when component unmounts
@@ -113,7 +113,7 @@ useEffect(() => {
   return () => {
     console.log('Component unmounted')
   }
-}
+});
 ```
 
 ## Custom Hooks
@@ -244,7 +244,7 @@ define('useCounter tests', () => {
   it('should return the initial value', () => {
     expect(value).toEqual(initialValue);
   })
-})
+});
 ```
 
 #### How to test a custom hook
@@ -406,7 +406,7 @@ componentDidMount() {
 
   const response = fakeService.getResponse(this.state.id); // concern 2
   this.state.response = response;
-}
+};
 ```
 
 With hooks, each responsibility can be split in one different hook call. Example:
