@@ -367,7 +367,7 @@ const reducer = (state = {}, action) => {
 export default reducer;
 ```
 
-### Component
+#### Component
 
 ```jsx
 import React, { useReducer } from 'react';
