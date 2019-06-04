@@ -82,16 +82,6 @@ const App = () => {
 export default App;
 ```
 
-#### Sólo ejecuta en componentDidMount
-
-Al pasar un array vacío, el hook no se ejecuta cuando el componente se renderizar otras veces.
-
-```jsx
-useEffect(() => {
-  document.title = `${value} is the current value=`;
-}, []);
-```
-
 #### Sólo ejecuta cuando variables específicas se cambian
 
 Sólo va a ejecutar cuando la variable `value`se cambia.
@@ -100,6 +90,16 @@ Sólo va a ejecutar cuando la variable `value`se cambia.
 useEffect(() => {
   document.title = `${value} is the current value`;
 }, [value]);
+```
+
+#### Sólo ejecuta en componentDidMount
+
+Al pasar un array vacío, el hook no se ejecuta cuando el componente se renderizar otras veces.
+
+```jsx
+useEffect(() => {
+  document.title = `${value} is the current value=`;
+}, []);
 ```
 
 #### Ejecutando cuando el componente desmontase
